@@ -11,7 +11,7 @@ $(document).ready(function() {
 			calculation(this);
 		});
 	});	
-
+	
 	function calculation(self) {
 		console.log(self);
 		var row = $(self).parents('.row');
