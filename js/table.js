@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
 	$('input').blur(function() {
 		calculation(this);
 	});
@@ -40,17 +41,3 @@ $(document).ready(function() {
 		}
 	}
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
