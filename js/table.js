@@ -2,14 +2,36 @@ $(document).ready(function() {
 	$('input').blur(function() {
 		calculation(this);
 	});
+	$('.fa-repeat').click(function(){
+		reset_row(this);
+	});
+	$('.fa-trash-o').click(function() {
+		trash_row(this);
+	});
 	$('.add-row').click(function() {
 		var cloned = $('.row').first().clone().appendTo('.table-rows');
+		console.log(cloned);
 		var cloned_input = $('.row').last().find('input').val('');
 		var cloned_span = $('.row').last().find('span').text('');
 		$('input').blur(function() {
 			calculation(this);
 		});
-	});	
+		$('.fa-repeat').click(function(){
+			reset_row(this);
+		});
+		$('.fa-trash-o').click(function() {
+			trash_row(this);
+		});
+	});
+	function reset_row(self) {
+		var row = $(self).parents('.row');
+		row.find('input').val('');
+		row.find('span').text('');
+	}
+	function trash_row(self) {
+		var row = $(self).parents('.row').last().remove();
+	}
+
 	function calculation(self) {
 		console.log(self);
 		var row = $(self).parents('.row');
