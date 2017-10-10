@@ -17,6 +17,11 @@ $(document).ready(function() {
 		console.log('.row-i meji inputner@:', row.find('input'));
 		var val1 = row.find('.val-one').val();
 		var val2 = row.find('.val-two').val();
+		var addition_span = row.find('.add-result');
+		var subtract_span = row.find('.sub-result');
+		var multiply_span = row.find('.mult-result');
+		var division_span = row.find('.div-result');
+		var modulus_span  = row.find('.mod-result');
 		if (val1 && val2)  {
 			val1 = Number(val1);
 			val2 = Number(val2);
@@ -25,17 +30,13 @@ $(document).ready(function() {
 			var multiplying = val1 * val2;
 			var division = val1 / val2;
 			var modulus = val1 % val2; 
-			$('.add-result').text(adding);
-			$('.sub-result').text(subtracting);
-			$('.mult-result').text(multiplying);
-			$('.div-result').text(division);
-			$('.mod-result').text(modulus);
+			addition_span.text(adding);
+			subtract_span.text(subtracting);
+			multiply_span.text(multiplying);
+			division_span.text(division);
+			modulus_span.text(modulus);
 		} else {
-			$('.add-result').text('');
-			$('.sub-result').text('');
-			$('.mult-result').text('');
-			$('.div-result').text('');
-			$('.mod-result').text('');	
+			row.find('span').text('');	
 		}
 	}
 });
