@@ -33,7 +33,7 @@ $(document).ready(function() {
 	}
 	//Deleting rows after clicking trash icon
 	function trash_row(self) {
-		var row = $(self).parents('.row').last().remove();
+		var row = $(self).parents('.row').nextAll().remove();
 	}
 	//Calculate inputs values when they get blur
 	function calculation(self) {
