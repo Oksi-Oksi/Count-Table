@@ -65,10 +65,10 @@ body {
 				}
 			}
 				i  {
+				opacity: 0;
 				position: absolute;
 				color: $table-header;
 				top: 15px;
-				opacity: 0;
 				transition: all 0.3s;
 				&:hover {
 					cursor: pointer;
@@ -83,6 +83,11 @@ body {
 			&:hover {
 				ul ~ i {
 					opacity: 1;
+				}
+			}
+			&:first-child {
+				.fa-trash-o {
+					display: none;
 				}
 			}
 		}
