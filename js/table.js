@@ -33,7 +33,7 @@ $(document).ready(function() {
 	}
 	//Deleting rows after clicking trash icon
 	function trash_row(self) {
-		var row = $(self).parents('.row').nextAll().remove();
+		var row = $(self).parents('.row:not(:first-child)').remove();	
 	}
 	//Calculate inputs values when they get blur
 	function calculation(self) {
@@ -42,7 +42,7 @@ $(document).ready(function() {
 		//find first and second input with their values
 		var val1 = row.find('.val-one').val();
 		var val2 = row.find('.val-two').val();
-		//finidng spans
+		//finding spans
 		var addition_span = row.find('.add-result');
 		var subtract_span = row.find('.sub-result');
 		var multiply_span = row.find('.mult-result');
